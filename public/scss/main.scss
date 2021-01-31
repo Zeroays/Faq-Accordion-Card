@@ -1,6 +1,14 @@
 @import "_globals";
 @import "_animations.scss";
 
+.card__logo__box--prop {
+  position: absolute;
+  top: 35vh;
+  left: $card-width * 0.11;
+  width: $card-width * 0.2;
+  z-index: 2;
+}
+
 .card {
   background-color: white;
   width: $card-width;
@@ -31,13 +39,15 @@
       left: -$card-width * 0.1;
       width: $card-width * 0.5;
     }
-    // &__box--prop {
-    //   top: $card-width * 0.2;
-    //   left: -$card-width * 0.01;
-    //   width: $card-width * 0.5;
-    // }
   }
 }
+
+// .card__logo__box--prop {
+//   position: absolute;
+//   top: $card-width * 0.03;
+//   left: -$card-width * 0.1;
+//   width: $card-width * 0.2;
+// }
 
 .card__info {
   grid-area: card;

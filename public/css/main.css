@@ -26,6 +26,13 @@ body {
 .arrow--active {
   animation: rotateToTop 750ms forwards; }
 
+.card__logo__box--prop {
+  position: absolute;
+  top: 35vh;
+  left: 7.7vw;
+  width: 14vw;
+  z-index: 2; }
+
 .card {
   background-color: white;
   width: 70vw;
