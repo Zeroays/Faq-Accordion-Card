@@ -1,0 +1,12 @@
+@keyframes rotateToTop {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+.arrow--active {
+  animation: rotateToTop 750ms forwards;
+}
