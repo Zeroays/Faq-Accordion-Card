@@ -26,16 +26,19 @@ body {
 .arrow--active {
   animation: rotateToTop 750ms forwards; }
 
+.card__wrapper {
+  position: relative;
+  width: 1000px; }
+
 .card__logo__box--prop {
   position: absolute;
-  top: 35vh;
-  left: 7.7vw;
-  width: 14vw;
-  z-index: 2; }
+  top: 11rem;
+  left: -6.2rem;
+  width: 12rem;
+  z-index: 1; }
 
 .card {
   background-color: white;
-  width: 70vw;
   min-height: 500px;
   padding: 50px 0;
   border-radius: 20px;
@@ -51,13 +54,13 @@ body {
   .card__logo {
     grid-area: logo; }
     .card__logo__frame {
-      top: -22.75vw;
-      left: -35vw;
-      width: 63vw; }
+      top: -20rem;
+      left: -600px;
+      width: 65rem; }
     .card__logo__woman-on-desktop {
-      top: 2.1vw;
-      left: -7vw;
-      width: 35vw; }
+      top: 2rem;
+      left: -80px;
+      width: 32.5rem; }
 
 .card__info {
   grid-area: card;
@@ -95,3 +98,30 @@ body {
   .card__info .answer--open {
     max-height: 100px;
     opacity: 1; }
+
+@media screen and (max-width: 881.25px) {
+  .card__wrapper {
+    transform: translateY(2rem);
+    width: 300px; }
+  .card__logo__box--prop {
+    top: -3.5rem;
+    left: 2rem;
+    width: 5rem; }
+  .card {
+    min-height: 500px;
+    overflow: visible;
+    grid-template-areas: "logo" "card";
+    grid-template-columns: 100%;
+    grid-template-rows: auto; }
+    .card__logo__frame {
+      top: -7rem;
+      left: 50px;
+      width: 12rem; }
+    .card__logo__woman-on-desktop {
+      top: -6.25rem;
+      left: 50px;
+      width: 12rem; }
+  .card__info {
+    margin: 0 auto; }
+    .card__info__title {
+      text-align: center; } }

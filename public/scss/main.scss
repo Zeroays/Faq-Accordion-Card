@@ -1,17 +1,21 @@
 @import "_globals";
 @import "_animations.scss";
 
+.card__wrapper {
+  position: relative;
+  width: 1000px;
+}
+
 .card__logo__box--prop {
   position: absolute;
-  top: 35vh;
-  left: $card-width * 0.11;
-  width: $card-width * 0.2;
-  z-index: 2;
+  top: 11rem;
+  left: -6.2rem;
+  width: 12rem;
+  z-index: 1;
 }
 
 .card {
   background-color: white;
-  width: $card-width;
   min-height: $card-height;
   padding: 50px 0;
   border-radius: 20px;
@@ -30,24 +34,17 @@
     grid-area: logo;
 
     &__frame {
-      top: -$card-width * 0.325;
-      left: -$card-width * 0.5;
-      width: $card-width * 0.9;
+      top: -20rem;
+      left: -600px;
+      width: 65rem;
     }
     &__woman-on-desktop {
-      top: $card-width * 0.03;
-      left: -$card-width * 0.1;
-      width: $card-width * 0.5;
+      top: 2rem;
+      left: -80px;
+      width: 32.5rem;
     }
   }
 }
-
-// .card__logo__box--prop {
-//   position: absolute;
-//   top: $card-width * 0.03;
-//   left: -$card-width * 0.1;
-//   width: $card-width * 0.2;
-// }
 
 .card__info {
   grid-area: card;
@@ -95,5 +92,47 @@
   .answer--open {
     max-height: 100px;
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint * 2.35) {
+  .card__wrapper {
+    transform: translateY(2rem);
+    width: 300px;
+  }
+
+  .card__logo__box--prop {
+    top: -3.5rem;
+    left: 2rem;
+    width: 5rem;
+  }
+
+  .card {
+    min-height: $card-height;
+    overflow: visible;
+    grid-template-areas:
+      "logo"
+      "card";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+
+    &__logo {
+      &__frame {
+        top: -7rem;
+        left: 50px;
+        width: 12rem;
+      }
+      &__woman-on-desktop {
+        top: -6.25rem;
+        left: 50px;
+        width: 12rem;
+      }
+    }
+  }
+  .card__info {
+    &__title {
+      text-align: center;
+    }
+    margin: 0 auto;
   }
 }
